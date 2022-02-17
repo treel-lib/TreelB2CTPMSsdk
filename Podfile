@@ -7,6 +7,6 @@ target 'TreelB2CTPMSsdk' do
 
   # Pods for TreelB2CTPMSsdk
 
-	pod 'CryptoSwift', '~> 0.7.1'
+	pod 'CryptoSwift' #, '~> 0.7.1'
 
 end
