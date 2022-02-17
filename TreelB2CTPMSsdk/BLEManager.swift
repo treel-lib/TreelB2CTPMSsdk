@@ -80,13 +80,17 @@ public class BLEManager: NSObject {
 
 
                 //MARK: Checking BLE and iBeacon Connectivity
-            var isLocationOn = false
+            
             if CLLocationManager.locationServicesEnabled() {
                 switch CLLocationManager.authorizationStatus() {
                     case .notDetermined, .restricted, .denied:
-                        isLocationOn = false
-                    case .authorizedAlways, .authorizedWhenInUse:
-                        isLocationOn = true
+                        break;
+//
+                    case .authorizedAlways, .authorizedWhenInUse: break;
+//
+                
+                    @unknown default:
+                        break;
                 }
             }
         }else{
@@ -118,16 +122,13 @@ public class BLEManager: NSObject {
         vehicleConfigurations = DBHelper.DBHelperShared.fetchVehiclesConfigurationData()
         
         if !treelTags.isEmpty {
-            for tag in treelTags {
-                
-            }
+          
             treelTags.removeAll()
         }
         for configuration in vehicleConfigurations! {
             
             if let sensorDetectionEvent = DBHelper.DBHelperShared.getSensorDetectionEvent(macAddress: configuration.macAddress!) {
                 let tag = DetectedTreelTag()
-                
                 
                 if (isSensorDataWithinLastGivenMinutes(lastAlertTimeStamp: sensorDetectionEvent.sensorDetectionTimestamp, minutes: 2)) {
                     let sensorData = sensorDetectionEvent.sensorData.split(separator: ",")
@@ -140,7 +141,6 @@ public class BLEManager: NSObject {
                     tag.time = dateString
                     tag.dateTime = sensorDetectionEvent.sensorDetectionTimestamp!
                     tag.isLive = false
-                    
                     if let index = treelTags.index(where: {$0.macID == configuration.macAddress!}) {
                         treelTags[index] = tag
                     }else{
@@ -158,9 +158,7 @@ public class BLEManager: NSObject {
         let vehicleConfigurations = DBHelper.DBHelperShared.fetchVehiclesConfigurationData()
         
         if !treelTags.isEmpty {
-            for tag in treelTags {
-                    //                        tag.stopTimer()
-            }
+          
             treelTags.removeAll()
         }
         
@@ -170,7 +168,7 @@ public class BLEManager: NSObject {
                 let tag = DetectedTreelTag()
                 
                 let sensorData = sensorDetectionEvent.sensorData.split(separator: ",")
-                print("TREEL sensorData:-\(sensorDetectionEvent.sensorData) :\(configuration.macAddress) :\(configuration.tyrePosition)")
+//                print("TREEL sensorData:-\(sensorDetectionEvent.sensorData) :\( configuration.macAddress) :\( configuration.tyrePosition)")
                 tag.pressure = String(sensorData[0])
                 tag.temperature = String(sensorData[1])
                 tag.battery = String(sensorData[2])
@@ -266,7 +264,10 @@ public class BLEManager: NSObject {
         let keyData = key.data(using: .utf8)!
         
         do {
-            let aes = try AES(key: (keyData.bytes), blockMode: .ECB) // aes128
+            
+            let iv = AES.randomIV(AES.blockSize)
+            let aes = try AES(key: (keyData.bytes), blockMode: CBC(iv: iv))
+//            let aes = try AES(key: (keyData.bytes), blockMode: .ECB) // aes128
             let decryptedData = try aes.decrypt(encryptedData.bytes)
             return Data(decryptedData)
         } catch {
@@ -457,7 +458,7 @@ extension BLEManager : CBCentralManagerDelegate {
             return
         }
         
-        if let index = treelTags.index(where: {$0.macID == tag.macID}) {
+        if let index = treelTags.firstIndex(where: {$0.macID == tag.macID}) {
             treelTags[index] = tag
         } else {
             treelTags.append(tag)

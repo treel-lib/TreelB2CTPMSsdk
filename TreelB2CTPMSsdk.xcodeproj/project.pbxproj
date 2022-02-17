@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5FEB607DBBB4A7E24CCFF34F /* Pods_TreelB2CTPMSsdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352AB657170493AE026E4BCE /* Pods_TreelB2CTPMSsdk.framework */; };
 		9344AE032771A151002B8BFD /* CommonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9344AE022771A151002B8BFD /* CommonExtension.swift */; };
 		936739A227B6611800773553 /* AlertNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936739A127B6611800773553 /* AlertNotification.swift */; };
 		936739A827B66C2200773553 /* TpmsDetectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936739A727B66C2200773553 /* TpmsDetectionData.swift */; };
+		93673B4027BCD80500773553 /* BuildFile in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9371CB49277045960064C368 /* TreelB2CTPMSsdk.docc in Sources */ = {isa = PBXBuildFile; fileRef = 9371CB48277045960064C368 /* TreelB2CTPMSsdk.docc */; };
 		9371CB4A277045960064C368 /* TreelB2CTPMSsdk.h in Headers */ = {isa = PBXBuildFile; fileRef = 9371CB47277045960064C368 /* TreelB2CTPMSsdk.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9371CB51277045BA0064C368 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9371CB50277045BA0064C368 /* BLEManager.swift */; };
@@ -19,13 +21,29 @@
 		9371CB59277045DB0064C368 /* VehicleConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9371CB57277045DB0064C368 /* VehicleConfiguration.swift */; };
 		9371CB5D277045F10064C368 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9371CB5C277045F10064C368 /* DBHelper.swift */; };
 		9371CB5F277056340064C368 /* TreelTagScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9371CB5E277056340064C368 /* TreelTagScan.swift */; };
-		DB9746020665475BCA159167 /* Pods_TreelB2CTPMSsdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBC9CAA2A17968C49721058B /* Pods_TreelB2CTPMSsdk.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		93673B4127BCD80500773553 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				93673B4027BCD80500773553 /* BuildFile in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		352AB657170493AE026E4BCE /* Pods_TreelB2CTPMSsdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TreelB2CTPMSsdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		902F726FFE6FF622EC02A014 /* Pods-TreelB2CTPMSsdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TreelB2CTPMSsdk.release.xcconfig"; path = "Target Support Files/Pods-TreelB2CTPMSsdk/Pods-TreelB2CTPMSsdk.release.xcconfig"; sourceTree = "<group>"; };
 		9344AE022771A151002B8BFD /* CommonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExtension.swift; sourceTree = "<group>"; };
 		936739A127B6611800773553 /* AlertNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNotification.swift; sourceTree = "<group>"; };
 		936739A727B66C2200773553 /* TpmsDetectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TpmsDetectionData.swift; sourceTree = "<group>"; };
+		93673B4227BCD89300773553 /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9371CB44277045960064C368 /* TreelB2CTPMSsdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TreelB2CTPMSsdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9371CB47277045960064C368 /* TreelB2CTPMSsdk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TreelB2CTPMSsdk.h; sourceTree = "<group>"; };
 		9371CB48277045960064C368 /* TreelB2CTPMSsdk.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = TreelB2CTPMSsdk.docc; sourceTree = "<group>"; };
@@ -36,9 +54,7 @@
 		9371CB57277045DB0064C368 /* VehicleConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleConfiguration.swift; sourceTree = "<group>"; };
 		9371CB5C277045F10064C368 /* DBHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		9371CB5E277056340064C368 /* TreelTagScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreelTagScan.swift; sourceTree = "<group>"; };
-		BBC9CAA2A17968C49721058B /* Pods_TreelB2CTPMSsdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TreelB2CTPMSsdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE68F1AE5F7A22B380498CFD /* Pods-TreelB2CTPMSsdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TreelB2CTPMSsdk.debug.xcconfig"; path = "Target Support Files/Pods-TreelB2CTPMSsdk/Pods-TreelB2CTPMSsdk.debug.xcconfig"; sourceTree = "<group>"; };
-		C4A971F2CBBF9DE20DBD2066 /* Pods-TreelB2CTPMSsdk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TreelB2CTPMSsdk.release.xcconfig"; path = "Target Support Files/Pods-TreelB2CTPMSsdk/Pods-TreelB2CTPMSsdk.release.xcconfig"; sourceTree = "<group>"; };
+		A59AA8F8192D72C4FFA8F4E9 /* Pods-TreelB2CTPMSsdk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TreelB2CTPMSsdk.debug.xcconfig"; path = "Target Support Files/Pods-TreelB2CTPMSsdk/Pods-TreelB2CTPMSsdk.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB9746020665475BCA159167 /* Pods_TreelB2CTPMSsdk.framework in Frameworks */,
+				5FEB607DBBB4A7E24CCFF34F /* Pods_TreelB2CTPMSsdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +72,8 @@
 		074B4447CF147BB770F0527A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BBC9CAA2A17968C49721058B /* Pods_TreelB2CTPMSsdk.framework */,
+				93673B4227BCD89300773553 /* CryptoSwift.framework */,
+				352AB657170493AE026E4BCE /* Pods_TreelB2CTPMSsdk.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -64,8 +81,8 @@
 		821596B5CC3082539911E19C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BE68F1AE5F7A22B380498CFD /* Pods-TreelB2CTPMSsdk.debug.xcconfig */,
-				C4A971F2CBBF9DE20DBD2066 /* Pods-TreelB2CTPMSsdk.release.xcconfig */,
+				A59AA8F8192D72C4FFA8F4E9 /* Pods-TreelB2CTPMSsdk.debug.xcconfig */,
+				902F726FFE6FF622EC02A014 /* Pods-TreelB2CTPMSsdk.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -133,11 +150,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9371CB4D277045960064C368 /* Build configuration list for PBXNativeTarget "TreelB2CTPMSsdk" */;
 			buildPhases = (
-				F52BAAF09CCA4A55F0D9CD30 /* [CP] Check Pods Manifest.lock */,
+				AED3E50466CAA6A033C8B73D /* [CP] Check Pods Manifest.lock */,
 				9371CB3F277045960064C368 /* Headers */,
 				9371CB40277045960064C368 /* Sources */,
 				9371CB41277045960064C368 /* Frameworks */,
 				9371CB42277045960064C368 /* Resources */,
+				93673B4127BCD80500773553 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -191,7 +209,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		F52BAAF09CCA4A55F0D9CD30 /* [CP] Check Pods Manifest.lock */ = {
+		AED3E50466CAA6A033C8B73D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -289,7 +307,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -347,7 +365,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -361,7 +379,7 @@
 		};
 		9371CB4E277045960064C368 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BE68F1AE5F7A22B380498CFD /* Pods-TreelB2CTPMSsdk.debug.xcconfig */;
+			baseConfigurationReference = A59AA8F8192D72C4FFA8F4E9 /* Pods-TreelB2CTPMSsdk.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -370,6 +388,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CryptoSwift\"",
+					"$(SRCROOT)/**",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -392,7 +415,7 @@
 		};
 		9371CB4F277045960064C368 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4A971F2CBBF9DE20DBD2066 /* Pods-TreelB2CTPMSsdk.release.xcconfig */;
+			baseConfigurationReference = 902F726FFE6FF622EC02A014 /* Pods-TreelB2CTPMSsdk.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -401,6 +424,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/CryptoSwift\"",
+					"$(SRCROOT)/**",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

@@ -307,7 +307,6 @@ public struct DBHelper
     
     func getSensorDetectionEvent(macAddress: String)-> SensorDetectionEvent? {
         let queryStatementString = "select * from SensorEventDetection where mac_address = '\(macAddress)'"
-        var SensorDetectionModel: [SensorDetectionModel] = []
         var queryStatement: OpaquePointer? = nil
         if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
             // 2
